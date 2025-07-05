@@ -28,9 +28,13 @@ spring:
     change-log: classpath:/db/changelog-master.yml
     default-schema: auth_service
     liquibase-schema: auth_service
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?prepareThreshold=0
     user: ${DB_USER_RW}
     password: ${DB_PWD_RW}
     enabled: true
+    drop-first: false
+    test-rollback-on-update: false
+    clear-checksums: true
 
 server:
   port: 8080
