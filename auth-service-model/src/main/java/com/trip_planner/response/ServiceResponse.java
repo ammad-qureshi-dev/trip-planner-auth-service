@@ -22,7 +22,7 @@ public class ServiceResponse<T> implements Serializable {
     private LocalDateTime requestCompletedAt;
 
     public static <T> ResponseEntity<ServiceResponse<T>> getServiceResponse(boolean isSuccess, T data, HttpStatus httpStatus) {
-        var serviceResponse = ServiceResponse.<T>builder()
+            var serviceResponse = ServiceResponse.<T>builder()
                 .isSuccess(isSuccess)
                 .data(data)
                 .requestId(UUID.randomUUID())
