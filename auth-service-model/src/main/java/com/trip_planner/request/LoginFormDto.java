@@ -6,9 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginFormDto {
-    @NonNull
-    private String email;
+  @NonNull private String email;
 
-    @NonNull
-    private String password;
+  @NonNull private String password;
 }
